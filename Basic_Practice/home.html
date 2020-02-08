@@ -1,0 +1,27 @@
+<html>
+	<head><title> {{ title }}  </title>
+		<link rel="stylesheet" href="/static/style.css"/>
+	</head>
+	<center>
+		<body>
+			<h2><strong>Hi,Raghvendra Here</strong></h2>
+			<h1><strong> RPI GPIO CONTROL AND MONITOR</strong></h1>
+			<h3>Date And Time On server is:{{ time }}</h3>
+			<h2>Switch STATUS:== {{ swsts }}</h2>
+			<h2>Motor STATUS:= {{mtrsts }}
+			<h2>led1 status:= {{ led1 }}</h2>
+			<h2>led2 status:= {{ led2 }}</h2>
+			<h1>Control Your Actuators From Here<h1>
+					<h2>DC-Motor Ctrl <a href="/mtr/forward" class="button" >FORWARD</a>
+						<a href="/mtr/reverse" class="button" >REVERSE</a>
+						<a href="/mtr/stop" class="button" >STOP</a></h2><br>
+					<h2> BLUE LED Ctrl <a href="/led1/on" class="button" >Turn ON</a>
+						<a href="/led1/off" class="button" >Turn OFF</a></h2><br>
+					<h2> RED LED Ctrl <a href="/led2/on" class="button" >Turn ON</a>
+						      <a href="/led2/off" class="button">Turn OFF</a></h2>
+
+
+		</body>
+	</center>
+
+</html>
