@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>IOT PLATFORM</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+        .GFG {
+            background-color: white;
+            border: 2px solid black;
+            color: green;
+            padding: 3px 6px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 8px 24px;
+            cursor: pointer;
+        }
+        .container1 {
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: repeat(auto-fit, 100px);
+        grid-template-rows: repeat(2, 100px);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('logout')}}">Logut</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav
+          <!-- Page Content -->
+  <div class="container">
+      <center>
+        {% with messages=get_flashed_messages() %}
+        {% if messages %}
+            {%  for message in messages %}
+               <h2 style="font-color:blue" > {{ message }}</h2>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
+        </center>
+    <h2>Welcome {{ name }}</h2>
+    <!--"http://192.168.43.199:8081       &#x1F881;&#x1F881-->
+<!--<img src="http://192.168.43.124:8081"/> <!--Enter the IP Address of your Raspberry Pi-->
+      <a href="/dashboard/cam/stream" >
+                        <button class="GFG">
+                                live Stream
+                        </button></a>
+      <h3>Temp:</h3>
+      <h3>Metal :</h3>
+      <h3>Live Location:</h3>
+
+
+<div style="float:right">
+      </div>
+     <div style=" height:400px; width:400px; float:right;">
+            <center>
+              <h2>ROBOT MOTION CONTROL</h2>
+              <h3>Robot Status: {{ r_status }}</h3>
+                 <div class="container1">
+                      &emsp;&nbsp;&nbsp;&nbsp;<center>  <a href="/dashboard/fwd" >
+                            <button class="GFG">
+                                Forward
+                            </button></a><br><br></center>&emsp;&nbsp;&nbsp;&nbsp;
+
+                        <a href="/dashboard/left" id="left">
+                            <button class="GFG">
+                                LEFT
+                            </button>
+                            </a>
+                        <a href="/dashboard/stop" >
+                        <button class="GFG">
+                                STOP
+                        </button></a>
+
+                    <a href="/dashboard/right">
+                        <button class="GFG">
+                            RIGHT
+                        </button></a><br><br>
+
+                    <center>
+                        <a href="/dashboard/reverse"><strong>
+                            <button class="GFG">
+                                REVERSE
+                            </button>
+                        </strong></a></center><br>
+                     <center><h2>GPS LOCATION </h2></center>
+    </div>
+
+
+    </div>
+  </div>
+
+
+  <!-- Bootstrap core JavaScript -->
+
+  <!-- <script src="static/jquery_robot/jquery1_min.js" ></script>-->
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+    <script src="static/jquery_robot/jquery1_min.js" ></script>
+</head>
+<body>
+
+<!--"http://192.168.43.199:8081       &#x1F881;&#x1F881-->
+<img src="#"/> <!--Enter the IP Address of your Raspberry Pi-->
+<div style="float:right">
+
+</div>
+<div style=" height:500px; width:300px; float:right;">
+<center>
+<h1><span style="color:#5C5C5C;">Robot</span><span style="color:#139442">Motion Control</span></h1>
+<h2>Surveillance Robot</h2><br><br>
+<a href="#" id="up" style="font-size:30px;text-decoration:none;"> <strong>&#10595;&#10595;<br>Forward</strong></a><br><br></center>
+<a href="#" id="left" style="font-size:30px;text-decoration:none;"><strong> &#10594;&#10594;Left</strong></a>&emsp;&emsp;
+&emsp;<a href="#" id="right" style="font-size:30px; text-decoration:none;"> <strong> Right&#10596;&#10596;</strong></a><br><br>
+<center><a href="#" id="down" style="font-size:30px;text-decoration:none;"><strong> Backward<br>&#10597;&#10597;</strong></a></center><br>
+
+</div>
+
+<script>
+$( document ).ready(function(){
+    $("#down").on("mousedown", function() {
+     $.get('/down_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#up").on("mousedown", function() {
+     $.get('/up_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#left").on("mousedown", function() {
+     $.get('/left_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+    $("#right").on("mousedown", function() {
+     $.get('/right_side');
+     }).on('mouseup', function() {
+     $.get('/stop');
+    });
+});
+</script>
+</body>
+</html>
