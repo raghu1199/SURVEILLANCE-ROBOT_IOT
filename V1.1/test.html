@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Create an HTML button that
+        acts like a link
+    </title>
+
+    <!-- Style to create button -->
+    <style>
+        .GFG {
+            background-color: white;
+            border: 2px solid black;
+            color: green;
+            padding: 3px 6px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 8px 24px;
+            cursor: pointer;
+        }
+      .container1 {
+        display: grid;
+        grid-gap: 2px;
+        grid-template-columns: repeat(auto-fit, 100px);
+        grid-template-rows: repeat(2, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks</h1>
+
+    <!-- Adding button inside the link tag -->
+    <a href='https://ide.geeksforgeeks.org/'>
+        <button class="GFG">
+            Click Here
+        </button>
+    </a>
+    <div style=" height:400px; width:400px; float:right;" >
+            <center>
+            <h2><span style="color:#5C5C5C;">Robot</span><span style="color:#139442">Motion Control</span></h2>
+            <h2>Surveillance Robot</h2><br><br>
+                <h3>Robot Status: {{ r_status }}</h3>
+                <div class="container1">
+                      &emsp;&nbsp;&nbsp;&nbsp;<center>  <a href="/dashboard/fwd" >
+                            <button class="GFG">
+                                Forward
+                            </button></a><br><br></center>&emsp;&nbsp;&nbsp;&nbsp;
+
+                        <a href="/dashboard/left" id="left">
+                            <button class="GFG">
+                                LEFT
+                            </button>
+                            </a>
+                        <a href="/dashboard/stop" >
+                        <button class="GFG">
+                                STOP
+                        </button></a>
+
+                    <a href="/dashboard/right">
+                        <button class="GFG">
+                            RIGHT
+                        </button></a><br><br>
+
+                    <center>
+                        <a href="/dashboard/reverse"><strong>
+                            <button class="GFG">
+                                REVERSE
+                            </button>
+                        </strong></a></center><br>
+    </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
